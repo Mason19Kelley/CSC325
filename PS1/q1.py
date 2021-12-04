@@ -1,40 +1,35 @@
 from time import time
-
-
-def example1(S):
-	n = len(S)
-	total = 0
-	for j in range(n):
-		total += S[j]
-	return total
-
-
-def example2(S):
-	n = len(S)
-	total = 0
-	for j in range(0, n, 2):
-		total += S[j]
-	return total
-
-
-def example3(S):
-	n = len(S)
-	total = 0
-	for j in range(n):
-		for k in range(1 + j):
-			total += S[k]
-	return total
-
-
-def example4(S):
-	n = len(S)
-	prefix = 0
-	total = 0
-	for j in range(n):
-		prefix += S[j]
-		total += prefix
-	return total
-
+ 
+def example1(S): # O(n)
+    n = len(S)
+    total = 0
+    for j in range(n): # T(n) = n
+        total += S[j]
+    return total
+ 
+def example2(S): # O(n)
+    n = len(S)
+    total = 0
+    for j in range(0, n, 2): # T(n) = n/2
+        total += S[j]
+    return total
+ 
+def example3(S): # O(n^2)
+    n = len(S)
+    total = 0
+    for j in range(n):
+        for k in range(1 + j):
+            total += S[k]
+    return total
+ 
+def example4(S): # O(n)
+    n = len(S)
+    prefix = 0
+    total = 0
+    for j in range(n):  # T(n) = n
+        prefix += S[j]
+        total += prefix
+    return total
 
 if __name__ == "__main__":
 	"""

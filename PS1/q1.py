@@ -37,11 +37,10 @@ if __name__ == "__main__":
 	Repeat similar codes for all four functions.
 	Make sure to use the same input for each function execution.
 	Execute multiple runs with different sizes of input.
-
+	"""
 	start_time = time()
 	S = range(10)
 	example1(S)
 	end_time = time()
 	T_time = end_time - start_time
 	print("Execution time = {}".format(T_time))
-	"""

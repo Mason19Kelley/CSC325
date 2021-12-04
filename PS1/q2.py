@@ -28,6 +28,7 @@ class AbsoluteProgression(Progression):
         self.num2 = num2 # since first in progression is |200-2|, or 198, this will be the previous value in the progression
 
     def advance(self):
+        pass
 
 if __name__ == "__main__":
     AbsoluteProgression().print_progression(20)

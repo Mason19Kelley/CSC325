@@ -1,0 +1,1 @@
+#summations from 1 to n = n^2

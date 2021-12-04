@@ -1,4 +1,5 @@
 # no. disks, source, destination, spare
+
 def hanoi(disks, src, dest, spr):
     # base case
     if (disks == 1):

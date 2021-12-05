@@ -49,6 +49,9 @@ class _DoublyLinkedBase:
 	def prepend(self, value):
 		self.insert_between(value, self._header, self._header.next)
 
+
+	def reverse(self):
+
 	def __str__(self):
 		temp = self._header
 		s = ""

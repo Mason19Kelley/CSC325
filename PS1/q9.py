@@ -11,18 +11,6 @@ class _DoublyLinkedBase:
 			self.next = next
 			self.prev = prev
 
-		# def getElement(self):
-		# 	return self._element
-		#
-		# def getNext(self):
-		# 	return self._next
-		#
-		# def setElement(self, newElem):
-		# 	self._element = newElem
-		#
-		# def setNext(self, newNext):
-		# 	self._next = newNext
-
 	def __init__(self):
 		self._header = self._Node(None, None, None)
 		self._trailer = self._Node(None, None, None)
@@ -33,3 +21,23 @@ class _DoublyLinkedBase:
 
 	def __len__(self):
 		return self._size
+
+	def is_empty(self):
+		return self._size == 0
+
+	def insert_between(self, e, pred, succ):
+		newest = self._Node(e, pred, succ)
+		pred.next = newest
+		succ._prev = newest
+		self._size += 1
+		return newest
+
+	def delete_node(self, node):
+		predecessor = node.prev
+		successor = node.next
+		predecessor.next = successor
+		successor.prev = predecessor
+		self._size -= 1
+		element = node.element  # record deleted element
+		node.prev = node.next = node.element = None  # deprecate node
+		return element

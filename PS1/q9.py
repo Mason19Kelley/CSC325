@@ -51,6 +51,13 @@ class _DoublyLinkedBase:
 
 
 	def reverse(self):
+		temp = self._header.next
+		while temp.element != None:
+			temp.next, temp.prev = temp.prev, temp.next
+			temp = temp.prev
+		self._header.next, self._header.prev = None, self._header.next
+		self._trailer.next, self._trailer.prev = self._trailer.prev, None
+		self._trailer, self._header = self._header, self._trailer
 
 	def __str__(self):
 		temp = self._header
@@ -61,8 +68,10 @@ class _DoublyLinkedBase:
 		return s
 
 if __name__ == "__main__":
-	dll = _DoublyLinkedBase()
+	L = _DoublyLinkedBase()
 	for i in range(10):
-		dll.prepend(randint(0,10))
-	print(dll)
+		L.prepend(randint(0,10))
+	print(L)
+	L.reverse()
+	print(L)
 

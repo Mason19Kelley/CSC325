@@ -1,15 +1,19 @@
 #Implement "reverse" as a method of _DoublyLinkedBased, called as L.reverse(),
 # that reverses the _DoublyLinkedBase instance L, yet without creating or destroying any nodes.
+from random import randint
 
 
 
 class _DoublyLinkedBase:
 	class _Node:
 
-		def __init__(self, element=None, next=None, prev=None):
+		def __init__(self, element=None, prev=None, next=None):
 			self.element = element
 			self.next = next
 			self.prev = prev
+
+		def __str__(self):
+			return str(self.element)
 
 	def __init__(self):
 		self._header = self._Node(None, None, None)
@@ -28,7 +32,7 @@ class _DoublyLinkedBase:
 	def insert_between(self, e, pred, succ):
 		newest = self._Node(e, pred, succ)
 		pred.next = newest
-		succ._prev = newest
+		succ.prev = newest
 		self._size += 1
 		return newest
 
@@ -41,3 +45,21 @@ class _DoublyLinkedBase:
 		element = node.element  # record deleted element
 		node.prev = node.next = node.element = None  # deprecate node
 		return element
+
+	def prepend(self, value):
+		self.insert_between(value, self._header, self._header.next)
+
+	def __str__(self):
+		temp = self._header
+		s = ""
+		while temp != None:
+			s += f"{temp}-"
+			temp = temp.next
+		return s
+
+if __name__ == "__main__":
+	dll = _DoublyLinkedBase()
+	for i in range(10):
+		dll.prepend(randint(0,10))
+	print(dll)
+

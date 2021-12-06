@@ -64,3 +64,4 @@ class SinglyLinkedList:
 			self._tail = current_node
 		self._size -= 1
 		return answer
+

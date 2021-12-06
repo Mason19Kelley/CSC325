@@ -2,7 +2,7 @@
 lines 53–55 of Code Fragment 6.7 
 
 for k in range(self._size):     # only consider existing elements
-  self._data[k] = old[k] # rather than old[walk] # intentionally shift indices
+  self._data[k] = old[walk] # rather than old[walk] # intentionally shift indices
   walk = (1 + walk) % len(old)  # use old size as modulus
   
 

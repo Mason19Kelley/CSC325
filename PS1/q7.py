@@ -16,8 +16,8 @@ for k in range(self._size):
 Give a clear explanation of what could go wrong.'''
 
 '''
-if the method self.is_empty() were executed, self._front would be incremented by 1, given that self._front is initialized as 0 in the constructor
-and self._front = (self._front + 1) % len(self._data) in the method; in this case, because self._front is initiailly 0, self._front would become (0+1) % len(self._data),
-or 1. in this case, at lines 53-55, one the first run-through of this for loop, k = 0 and self._data[k] = old[1]; however, in the modified code, for k = 0,
+if the method self.is_empty() were executed, self._front would be incremented by 1. given that self._front is initialized as 0 in the constructor
+and self._front = (self._front + 1) % len(self._data) in this resizing method, self._front would become (0+1) % len(self._data), or 1. 
+in this case, at lines 53-55, one the first run-through of this for loop, k = 0 and self._data[k] = old[1]; however, in the modified code, for k = 0,
 self._data[k] = old[k], or self._data[0] = old[0]. this is simply the incorrect index associated with the desired element to be added to self._data from old.
 '''

@@ -36,6 +36,5 @@ S = ArrayStack()
 for i in range(10):
 	S.push(i)
 
-for i in range(10):
-	print(S.data)
-	S.pop()
+clear(S)
+

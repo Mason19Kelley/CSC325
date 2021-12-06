@@ -23,11 +23,16 @@ class Progression:
 
 class AbsoluteProgression(Progression):
     def __init__(self, num1 = 2, num2 = 200):
-        Progression.__init__(abs(num1-num2))
-        self.num1 = num1
+        super().__init__(abs(num1-num2))
+        self.num1 = num1 # difference between every 2 in progression
         self.num2 = num2 # since first in progression is |200-2|, or 198, this will be the previous value in the progression
 
-    def advance(self):
+    def _advance(self):
+        diff = abs(self.num2 - self._current)
+        self.num2 = self._current
+        self._current -= diff
+        if(self._current < 0):
+            self._current *= -1
         pass
 
 if __name__ == "__main__":

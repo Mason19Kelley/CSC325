@@ -30,10 +30,11 @@ class AbsoluteProgression(Progression):
     def _advance(self):
         diff = abs(self.num2 - self._current)
         self.num2 = self._current
-        self._current -= diff
+        self._current = diff
         if(self._current < 0):
             self._current *= -1
-        pass
+
 
 if __name__ == "__main__":
-    AbsoluteProgression().print_progression(20)
+    AP = AbsoluteProgression()
+    AP.print_progression(20)

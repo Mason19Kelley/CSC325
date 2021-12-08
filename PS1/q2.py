@@ -38,3 +38,4 @@ class AbsoluteProgression(Progression):
 if __name__ == "__main__":
     AP = AbsoluteProgression()
     AP.print_progression(20)
+

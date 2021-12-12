@@ -1,1 +1,1 @@
-#summations from 1 to n = n^2
+#show the summation of log(i) for i=1 to N is Ω(nlog(n)) 

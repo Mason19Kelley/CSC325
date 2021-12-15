@@ -16,8 +16,7 @@ for k in range(self._size):
 Give a clear explanation of what could go wrong.'''
 
 '''
-if the method self.is_empty() were executed, self._front would be incremented by 1. given that self._front is initialized as 0 in the constructor
-and self._front = (self._front + 1) % len(self._data) in this resizing method, self._front would become (0+1) % len(self._data), or 1. 
-in this case, at lines 53-55, one the first run-through of this for loop, k = 0 and self._data[k] = old[1]; however, in the modified code, for k = 0,
-self._data[k] = old[k], or self._data[0] = old[0]. this is simply the incorrect index associated with the desired element to be added to self._data from old.
+in the updated code, self._data copies the data from the queue old at index k, storing it at index k. the problem with this is that k begins at 0,
+and this may not be the first index of the queue. this would only work if the queue old were not wrapped around; however, if it were, the second half
+of the queue — that which is wrapped around to the front — would be copied first, causing the elements of the queue to be copied in the incorrect order.
 '''

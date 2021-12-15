@@ -17,6 +17,6 @@ Give a clear explanation of what could go wrong.'''
 
 '''
 in the updated code, self._data copies the data from the queue old at index k, storing it at index k. the problem with this is that k begins at 0,
-and this may not be the first index of the queue. this would only work if the queue old were not wrapped around; however, if it were, the second half
+and this may not be the first index of the queue old. this would only work if the queue old were not wrapped around; however, if it were, the second half
 of the queue — that which is wrapped around to the front — would be copied first, causing the elements of the queue to be copied in the incorrect order.
 '''

@@ -39,8 +39,8 @@ if __name__ == "__main__":
 	Execute multiple runs with different sizes of input.
 	"""
 	start_time = time()
-	S = range(10)
-	example1(S)
+	S = range(1000)
+	example3(S)
 	end_time = time()
 	T_time = end_time - start_time
 	print("Execution time = {}".format(T_time))

@@ -10,6 +10,9 @@ Induction Step:
 Assume that any proper binary tree with n nodes >= 1 satisfies E(T) = I(T) + n - 1 
 then n+1 also holds true.
 Assume that the length of an internal node p has a maximum depth of d meaning that it has two external
-children with depths d + 1. Remove the two external nodes we get the number of nodes n = n-1 
-which leads to the equation E(T) = I(T) + (n-1) - 1 
+children with depths d + 1. Remove the two external nodes we get the number of nodes n = n+1 -2 = n-1 
+which leads to the equation E(T') = I(T') + (n-1) - 1 
+two external nodes (2(h+1)) were removed making the parent of those nodes an external node (h) 
+Hence, E(T') = E(T) - 2(h+1)+h 
+Therefore by induction hypothesis, E(T) - h - 2 = I(T) - h + n - 3 => E(T) = I(T) + n - 1
 '''

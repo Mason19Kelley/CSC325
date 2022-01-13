@@ -12,3 +12,4 @@ then n+1 also holds true.
 Assume that the length of an internal node p has a maximum depth of d meaning that it has two external
 children with depths d + 1. Remove the two external nodes we get the number of nodes n = n-1 
 which leads to the equation E(T) = I(T) + (n-1) - 1 
+'''

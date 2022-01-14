@@ -25,6 +25,7 @@ def heapify(Arr, Arr_len, i):
 
 
 # turn a Max-heap into a sorted array
+# O(nlog(n))
 def heapSort(Arr):
 
 	Arr_len = len(Arr)
@@ -43,7 +44,7 @@ def heapSort(Arr):
 	for i in range(Arr_len - 1, 0, -1):
 		arr[i], arr[0] = arr[0], arr[i]
 		heapify(arr, i, 0)
+
 print(arr)
 heapSort(arr)
-
 print(arr)

@@ -45,4 +45,5 @@ def heapSort(Arr):
 		heapify(arr, i, 0)
 print(arr)
 heapSort(arr)
+
 print(arr)

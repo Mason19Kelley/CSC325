@@ -1,0 +1,4 @@
+Consider a modification of the deterministic version of the quick-sort al-
+gorithm where we choose the element at index n/2 as our pivot. De-
+scribe the kind of sequence that would cause this version of quick-sort to
+run in Ω(n^2) time.

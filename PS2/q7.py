@@ -1,7 +1,7 @@
  #Implement the in-place heap-sort algorithm and experimentally determine its 
  #running time (using a similar approach as in the first assignment).
 
-arr = [1,7,43,90,4,6,15,89,24,68,13,68,54, 91]
+arr = [-1, -7, -5, -3, -4]
 # Turns an array into a max heap by working from the bottom up with each sub-heap
 def heapify(Arr, Arr_len, i):
 	# set indixes for current subheap

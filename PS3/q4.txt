@@ -2,7 +2,122 @@ Consider the sequence of keys (5,16,22,45,2,10,18,30,50,12,1). Draw
 the result of inserting entries with these keys (in the given order) into
 a. An initially empty (2,4) tree.
 b. An initially empty red-black tree.
+# A 2,4 tree
+# ins. 5
+#
+#	5
 
-table with answer are on google doc at the link below. if link does not work it should be shared with everyone. If time to turn in let me know and I can send the link or something again
+# ins. 16
+#
+#	5  16
 
-https://docs.google.com/document/d/1vaKYpa5YkFdwz3A3zIS8iwHfHuAr0Rwv_uWmacotw6g/edit?usp=sharing
+# ins. 22
+#
+#	5  16  22
+
+# ins. 45
+#
+#		16
+# 5           22 45
+
+# ins. 2
+#
+#		16
+# 2 5           22 45
+
+# ins. 10
+#
+#		16
+# 2 5 10         22 45
+
+# ins. 18
+#
+#		16
+# 2 5 10       18 22 45
+
+# ins. 30
+#
+#		 16 22
+# 2 5 10   18   30 45
+
+# ins. 50
+#
+#		 16 22
+# 2 5 10   18   30 45 50
+
+# ins. 12
+#
+#		5 16 22
+# 2    10 12   18   30 45 50
+
+# ins. 1
+#
+#		5 16 22
+# 1 2    10 12   18   30 45 50
+
+# B red-black tree
+# ins. 5
+#
+#	5(black)
+
+# ins. 16
+#
+#	5(black)
+#		16(red)
+
+# ins. 22
+#
+#	 16(black)
+#  5(red)    22(red)
+
+# ins. 45
+#
+#	 	16(black)
+#  5(black)    22(black)
+#					45(red)
+
+# ins. 2
+#
+#	 	16(black)
+#  5(black)    22(black)
+#2(red)				45(red)
+
+# ins. 10
+#
+#	 	16(black)
+#  5(black)    22(black)
+#2(red)10(red)		45(red)
+
+# ins. 18
+#
+#	 	16(black)
+#  5(black)    22(black)
+#2(red)10(red)	18(red)45(red)
+
+# ins. 30
+#
+#	 	16(black)
+#  5(black)    22(red)
+#2(red)10(red)	18(black)45(black)
+#						30(red)
+
+# ins. 50
+#
+#	 	16(black)
+#  5(black)    22(red)
+#2(red)10(red)	18(black)45(black)
+#						30(red)50(red)
+
+# ins. 12
+#
+#	 			16(black)
+#  5(black)    				22(red)
+#2(black)10(black)		18(black)45(black)
+#			12(red)				30(red)50(red)
+
+# ins. 1
+#
+#	 				16(black)
+#  		5(black)    				22(red)
+#	2(black)10(black)			18(black)45(black)
+#1(red)			12(red)					30(red)50(red)

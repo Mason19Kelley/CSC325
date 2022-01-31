@@ -2,3 +2,8 @@ Consider a modification of the deterministic version of the quick-sort al-
 gorithm where we choose the element at index n/2 as our pivot. De-
 scribe the kind of sequence that would cause this version of quick-sort to
 run in Ω(n^2) time.
+
+If the pivot is the biggest or smallest each time, this would lead the list(or sublist)
+to be split into sizes of 1 and n-1. If the pivot is always the biggest or smallest, these lists of
+n-1 will keep getting reduced by 1 each time which will lead to a recursion depth of n instead of log(n).
+This will lead to n recursions with each recursions taking O(n) which is n*n = Ω(n^2).

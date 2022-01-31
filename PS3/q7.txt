@@ -1,2 +1,17 @@
 Is our array-based implementation of merge-sort given in Section 12.2.2
 stable? Explain why or why not.
+
+'''
+1 def merge(S1, S2, S):
+2 ”””Merge two sorted Python lists S1 and S2 into properly sized list S.”””
+3 i=j=0
+4 while i+j < len(S):
+5 	if j == len(S2) or (i < len(S1) and S1[i] < S2[j]):
+6 		S[i+j] = S1[i] # copy ith element of S1 as next item of S
+7 		i += 1
+8 	else:
+9 		S[i+j] = S2[j] # copy jth element of S2 as next item of S
+10 		j += 1
+'''
+No. The first if statement adds element S1[i] to S if j is the length of S2 OR, in the second half, the element at position
+i in S1 is less than the element at position j in S2. If S1[i] equals S2[j], then S2[j] is added to S and the S1, S2 ordering is broken.

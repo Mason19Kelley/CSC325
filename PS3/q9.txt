@@ -1,3 +1,10 @@
 Of the n! possible inputs to a given comparison-based sorting algorithm,
 what is the absolute maximum number of inputs that could be correctly
 sorted with just n comparisons?
+
+There are n+1 possible combinations of list sequences in which there
+will only be n comparisons. n comparisons happen when a single element
+is out of place in the list and there a n possible locations for this single 
+element to be. The +1 in n+1 comes from trying to sort an already sorted list.
+The algorithm still needs to go through every element once to check if the
+sequence is sorted.

@@ -39,8 +39,7 @@ def inorder(root, arr=[]):
 
 def in2avl(arr):
 	if len(arr) > 0:
-		mindex = (len(arr)-1) // 2
-
+		mindex = len(arr) // 2
 		return tree_node(arr[mindex], in2avl(arr[0:mindex]), in2avl(arr[mindex + 1:len(arr)]))
 
 

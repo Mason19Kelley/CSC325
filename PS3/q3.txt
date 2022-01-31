@@ -1,2 +1,6 @@
 What does a splay tree look like if its entries are accessed in increasing
 order by their keys?
+
+The ending splay tree will look like a line with the greatest node at the root and the smallest in the left 
+most node. if every node is accessed looking for the greatest node, each subtree will be splayed to the left
+creating a line

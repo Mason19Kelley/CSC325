@@ -1,2 +1,23 @@
 Draw the AVL tree resulting from the insertion of an entry with key 52
 into the AVL tree of Figure 11.14b.
+
+original 11.14b
+62
+44              78
+17   50              88
+     48   54
+     
+insert 52
+
+62
+44              78
+17   50              88
+     48   54
+          52
+          
+restructuring tree
+
+62
+50             78
+44        54        88
+17   48   52

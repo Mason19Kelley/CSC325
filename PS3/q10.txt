@@ -3,5 +3,5 @@ the median of the d last elements in the input sequence of n elements, for
 a fixed, constant odd number d ≥ 3. What is the asymptotic worst-case
 running time of quick-sort in this case?
 
-The worst case will be O(n^2) because the run time of execution of a quick sort would be O(n*h) where h is
-the height of the tree and the traversal of the height of the tree is O(n) therefore O(n*n) = O(n^2)
+The worst case will be O(n^2) because the worst case is when the greatest or smallest elements are picked creating a linear tree.
+The sizes of the subtrees will be d+(d-1)+(d-2)...(d-n) giving a result of O(n^2)

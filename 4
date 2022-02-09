@@ -1,0 +1,29 @@
+4
+
+def artGallery(X):
+	guard = []
+	for x in X:
+	# last guard + distance of his or her position on either side
+		if (x > guard[-1] + 1):
+			guard.append(x+1)
+	return list(set(guard))
+
+5
+
+# houses are denoted by indices i and adjacent
+def robber(nums):
+	# no house, can't rob
+	if (len(nums) == 0):
+		return 0
+	# if only 1 house, no adjacent houses
+	elif (len(nums) == 1):
+		return nums[0]
+	money = [0]*2
+	i = 0
+	for i in range(2, len(num)):
+		money[0] = money[0] + nums[i]
+		money[1] = money[1] + nums[i+1]
+	if(money[0] > money[1]):
+		return money[0]
+	else:
+		return money[1]

@@ -1,3 +1,10 @@
+Given a list of non-negative integers representing the amount of money of each house,
+determine the maximum amount of money you can rob tonight without alerting the police.
+
+Write a Python function with the signature solve(nums) that returns the maximum amount to rob,
+where nums of the Python list of the amount at each house.
+
+
 class Solution:
     def rob(self, nums):
         length = len(nums)

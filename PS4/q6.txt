@@ -1,1 +1,6 @@
+R-14.3 Draw an adjacency matrix representation of the undirected graph shown
+in Figure 14.1.
+R-14.4 Draw an adjacency list representation of the undirected graph shown in
+Figure 14.1.
+
 https://docs.google.com/document/d/18Vd7rl4rxiNWBRRnkLCIriXa-YG_Jn2UHMVXssk9Ds4/edit?usp=sharing

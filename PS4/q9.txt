@@ -1,1 +1,1 @@
-
+Construct the condensation graph for the following graph in the form of an adjacency matrix:

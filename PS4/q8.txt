@@ -1,1 +1,16 @@
+Let G be the graph with the adjacency matrix as given below.
+Use Dijkstra's algorithm to find the shortest path from the vertex 1.
+Show each iteration of the while loop.
 
+
+
+
+    1   2   3   4   5   6   7   8
+1   0   1   2   3   0   0   0   0
+2   1   0   1   2   0   0   0   0
+3   2   1   0   1   0   0   0   0
+4   3   2   1   0   0   2   0   0
+5   0   0   0   0   0   1   2   3
+6   0   0   0   2   1   0   1   0
+7   0   0   0   0   2   1   0   1
+8   0   0   0   0   3   0   1   0

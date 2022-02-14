@@ -1,1 +1,9 @@
-
+class Solution:
+    def rob(self, nums):
+        length = len(nums)
+        if (length < 3):
+            return max(nums)
+        money = [nums[0], max(nums[0:2])]
+        for i in range(2, length):
+            money.append(max(nums[i] + money[-2], money[-1]))
+        return money[-1]

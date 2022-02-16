@@ -4,3 +4,5 @@ X = "skullandbones"
 Y = "lullabybabies"
 
 What is a longest common subsequence between these strings?
+
+LCS - "ullabes"

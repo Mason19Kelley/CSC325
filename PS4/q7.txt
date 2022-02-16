@@ -4,3 +4,4 @@ There are 10,000 vertices and 20,000 edges, and 10,000^2 > 10,000 + 20,000 in th
 2. Both could be used. In the case of a complete graph with (n 2) edges, both have space complexities of O(V^2); therefore, it depends on the weight of the edges.
 
 3. An adjacency matrix should be used. The time complexity for querying in an adjacency list is O(|V|) and the time complexity for querying in an adjacency matrix is O(!).
+

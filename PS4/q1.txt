@@ -5,3 +5,6 @@ the comparisons made to compute the last(c) function.
 
 R-13.5 Repeat Exercise R-13.3 for the Knuth-Morris-Pratt algorithm, not count-
 ing the comparisons made to compute the failure function.
+
+
+https://docs.google.com/document/d/18Vd7rl4rxiNWBRRnkLCIriXa-YG_Jn2UHMVXssk9Ds4/edit?usp=sharing

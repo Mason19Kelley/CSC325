@@ -15,4 +15,13 @@ Show each iteration of the while loop.
 7   0   0   0   0   2   1   0   1
 8   0   0   0   0   3   0   1   0
 
-
+It. No.
+0              D = [0, inf, inf, inf, inf, inf, inf, inf]
+1       u = 1, D = [0, 1, 2, 3, inf, inf, inf, inf]
+2       u = 2, D = [0, 1, 2, 3, inf, inf, inf, inf]
+3       u = 3, D = [0, 1, 2, 3, inf, inf, inf, inf]
+4       u = 4, D = [0, 1, 2, 3, inf, 5, inf, inf]
+5       u = 6, D = [0, 1, 2, 3, 6, 5, 6, inf]
+6       u = 5, D = [0, 1, 2, 3, 6, 5, 6, 9]
+7       u = 7, D = [0, 1, 2, 3, 6, 5, 6, 7]
+8       u = 8, D = [0, 1, 2, 3, 6, 5, 6, 7]

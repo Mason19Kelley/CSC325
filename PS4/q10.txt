@@ -16,3 +16,16 @@ following table.
 7 - -   -   -   -   -   -   305
 8 - -   -   -   -   -   -   -
 Find which bridges to build to minimize the total construction cost.
+
+# Prim-Jarn ́ık Algorithm
+It. no.
+
+1      (8, 1) - 120
+2      (8, 2) - 155
+3      (8, 5) - 170
+4      (5, 3) - 115
+5      (5, 4) - 160
+6      (2, 6) - 180
+7      (6, 7) - 175
+sum = 120 + 155 + 170 + 115 + 160 + 180 + 175 = 1,075
+total cost = 1,075

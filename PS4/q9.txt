@@ -1,1 +1,6 @@
 Construct the condensation graph for the following graph in the form of an adjacency matrix:
+
+    014 237 56
+014 0   0   1
+237 0   0   1
+56  0   0   0

@@ -13,8 +13,6 @@ class Eertree(object):
         # two initial root nodes
         self.root_odd = Node() #odd length root node, or node -1
         self.root_even = Node() #even length root node, or node 0
- 
-        # Initialize empty tree
         self.root_odd.link = self.root_even.link = self.root_odd
         self.root_odd.len = -1
         self.root_even.len = 0
@@ -23,7 +21,7 @@ class Eertree(object):
 
 
     # returns node that should be above the newly created node after a character is inserted
-    def get_max_suffix_pal(self, startNode, a):
+    def maxSuffix(self, startNode, a):
         node = startNode
         i = len(self.S)
         k = node.len
@@ -35,8 +33,7 @@ class Eertree(object):
  
     def add(self, new_char):
         # find the node directly above the new node that will be inserted
-        prev = self.get_max_suffix_pal(self.maxSufT, new_char)
-
+        prev = self.maxSuffix(self.maxSufT, new_char)
         # We check prev node to see whether or not it has an edge to a
         NewNode = not new_char in prev.edges
         if NewNode:
@@ -49,38 +46,33 @@ class Eertree(object):
                 new.link = self.root_even
             else:
                 #backwards link from new node to edge of prev nodes
-                new.link = self.get_max_suffix_pal(prev.link, new_char).edges[new_char]
- 
+                new.link = self.maxSuffix(prev.link, new_char).edges[new_char]
             # create the edge (prev - new)
             prev.edges[new_char] = new
- 
         #new becomes the new maxSufT
         self.maxSufT = prev.edges[new_char]
- 
         #add new char to stored string
         self.S.append(new_char)
- 
         return NewNode
 
 
     # prints out all sub-palindromes by traversing through the string and nodes
-    def get_sub_palindromes(self, nd, nodesToHere, charsToHere, result):
-        #Each node represents a palindrome, which can be reconstructed
-        #by the path from the root node to each non-root node.
- 
+    def subPalindromes(self, root_node, nodePath, charPath, result):
         #Traverse all edges, since they represent other palindromes
-        for lnkName in nd.edges:
-            nd2 = nd.edges[lnkName] #The lnkName is the character used for this edge
-            self.get_sub_palindromes(nd2, nodesToHere+[nd2], charsToHere+[lnkName], result)
+        for char in root_node.edges:
+            next = root_node.edges[char] #
+            # recursively call itself to add the next edge to result
+            self.subPalindromes(next, nodePath+[next], charPath+[char], result)
  
-        #Reconstruct based on charsToHere characters.
-        if id(nd) != id(self.root_odd) and id(nd) != id(self.root_even): #Don't print for root nodes
-            tmp = "".join(charsToHere)
-            if id(nodesToHere[0]) == id(self.root_even): #Even string
-                assembled = tmp[::-1] + tmp
+        #Reconstruct based on charPath for each call of subPalindromes
+        if id(root_node) != id(self.root_odd) and id(root_node) != id(self.root_even): #Don't print root nodes
+            temp = "".join(charPath)
+            # different construction of the string if its an even or odd palindrome
+            if id(nodePath[0]) == id(self.root_even): #Even string
+                palindrome = temp[::-1] + temp
             else: #Odd string
-                assembled = tmp[::-1] + tmp[1:]
-            result.append(assembled)
+                palindrome = temp[::-1] + temp[1:]
+            result.append(palindrome)
 
 
 
@@ -95,6 +87,8 @@ if __name__ == "__main__":
     #Traverse tree to find sub-palindromes
     result = []
 
-    eertree.get_sub_palindromes(eertree.root_odd, [eertree.root_odd], [], result) #Odd length words
-    eertree.get_sub_palindromes(eertree.root_even, [eertree.root_even], [], result) #Even length words
+    #gets odd length palindromes
+    eertree.subPalindromes(eertree.root_odd, [eertree.root_odd], [], result)
+    # gets even length palindromes
+    eertree.subPalindromes(eertree.root_even, [eertree.root_even], [], result)
     print ("Sub-palindromes:", result)
